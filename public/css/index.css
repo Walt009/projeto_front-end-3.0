@@ -1,0 +1,96 @@
+
+/* Definições gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #0056b3;
+    padding: 20px 0;
+    color: white;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Seção de destaque */
+.hero {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+    margin: 20px 0;
+}
+
+.hero .imagem-principal {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* Seção de conteúdo */
+.content {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.content p {
+    font-size: 18px;
+    color: #333;
+}
+
+.content .imagem-secundaria {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
