@@ -43,9 +43,9 @@ header nav ul li a {
 
 /* Seção de destaque */
 .hero {
-    background-color: #f4f4f4;
+    background-color: #4114d4;
     padding: 60px 0;
-    text-align: center;
+    text-align: left;
 }
 
 .hero h2 {
