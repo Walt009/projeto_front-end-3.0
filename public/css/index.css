@@ -1,7 +1,8 @@
 /* Definições gerais */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'OpenDyslexic', Arial, sans-serif; /* Fonte OpenDyslexic */
+    line-height: 1.5; /* Opicional: melhora a legibilidade */
     background-color: #fff;
 }
 
@@ -13,7 +14,7 @@ body {
 
 /* Estilos do cabeçalho */
 header {
-    background-color: #0056b3;
+    background-color: #3800f0;
     padding: 20px 0;
     color: white;
 }
@@ -39,6 +40,7 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-family: 'OpenDyslexic', sans-serif; /* Exemplo de uso em um título */
 }
 
 /* Seção de destaque */
@@ -50,12 +52,14 @@ header nav ul li a {
 
 .hero h2 {
     font-size: 36px;
-    color: #333;
+    font-family: 'OpenDyslexic', sans-serif; /* Exemplo de uso em um título */
+    color: #ffffff;
 }
 
 .hero p {
     font-size: 18px;
-    color: #666;
+    font-family: 'OpenDyslexic', sans-serif; /* Exemplo de uso em um título */
+    color: hsl(0, 0%, 100%);
     margin: 20px 0;
 }
 
@@ -73,6 +77,7 @@ header nav ul li a {
 
 .content p {
     font-size: 18px;
+    font-family: 'OpenDyslexic', sans-serif; /* Exemplo de uso em um título */
     color: #333;
 }
 
