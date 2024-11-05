@@ -1,4 +1,9 @@
 /* Definições gerais */
+@font-face { font-family: "OpenDyslexic"; 
+    src: url('https://dl.dropboxusercontent.com/s/qfpakpjedhsrdb9/OpenDyslexicAlta-Regular.ttf'); }
+
+body{
+font-family: OpenDyslexic;}
 body {
     margin: 0;
     font-family: 'OpenDyslexic', Arial, sans-serif; /* Fonte OpenDyslexic */
@@ -14,7 +19,7 @@ body {
 
 /* Estilos do cabeçalho */
 header {
-    background-color: #3800f0;
+    background-color: hsl(244, 98%, 48%);
     padding: 20px 0;
     color: white;
 }
@@ -37,7 +42,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: bold;
     font-family: 'OpenDyslexic', sans-serif; /* Exemplo de uso em um título */
