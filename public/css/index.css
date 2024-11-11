@@ -1,6 +1,6 @@
 /* Reset básico */
 * {
-    margin: 80;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -13,8 +13,11 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    overflow: hidden; /* Remove rolagem */
+    position: relative;
 }
 
+/* Cabeçalho e Navegação */
 header {
     width: 100%;
     text-align: center;
@@ -44,37 +47,38 @@ nav ul li a:hover {
     background-color: #0072e3;
 }
 
+/* Seção Principal */
 main {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 80%;
     max-width: 1200px;
+    text-align: center;
+    margin-top: 50px;
 }
 
 section.welcome {
     display: flex;
     align-items: center;
-    flex-grow: 1;
-    text-align: center;
+    flex-direction: column;
     gap: 20px; /* Espaço entre a logo e o texto */
 }
 
 .logo {
     width: 150px;
     height: auto;
-    margin-right: 200px; /* Espaço entre a logo e o texto */
-    align-items: left;
+    margin-bottom: 20px;
 }
 
 .welcome h1 {
     font-size: 2.5em;
-    margin-bottom: 50px;
-    text-align: center;
+    margin-bottom: 10px;
 }
 
 .welcome p {
     font-size: 1.2em;
-    margin: 20px;
+    margin-top: 10px;
 }
 
 /* Barra lateral de cores */
@@ -83,7 +87,30 @@ body::after {
     position: absolute;
     right: 0;
     top: 0;
-    width: 100px;
+    width: 20px;
     height: 100%;
     background: linear-gradient(to bottom, #00a800, #0073e6, #8500e4, #ff4500, #ffd700);
+}
+
+/* Botões Entrar e Cadastrar */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.button-group button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-group button:hover {
+    background-color: #0056b3;
 }

@@ -3,30 +3,63 @@ body {
     background-color: #004e9a;
     display: flex;
     justify-content: center;
-    align-items: right;
+    align-items: center;
     height: 100vh;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
 }
 
+/* Contêiner principal que divide a página em duas partes */
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo da seção da imagem à esquerda */
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding-right: 50px;
+}
+
+.image-container img {
+    width: 80%; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+/* Seção do formulário de login */
 .login-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    justify-content: center;
+    flex: 1;
 }
 
 .login-box {
-    background-color: #004e9a;
+    background-color: #e0e0e0; /* Cor de fundo mais clara para contraste */
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .login-box h1 {
-    text-align: left;
+    color: #004e9a;
+    font-size: 2em;
     margin-bottom: 20px;
+}
+
+/* Campos de entrada e ícones */
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .login-box form label {
@@ -43,48 +76,80 @@ body {
     border-radius: 5px;
 }
 
-.login-box form button {
-    width: 100%;
+.login-box form .input-container {
+    display: flex;
+    align-items: center;
+    background-color: #004e9a;
     padding: 10px;
-    background-color: #007bff;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.login-box form .input-container input {
+    background-color: transparent;
+    border: none;
     color: white;
-    border: 1px solid white;
+    flex: 1;
+    padding-left: 10px;
+}
+
+.login-box form .input-container i {
+    color: white;
+}
+
+/* Botões */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.button-group .register-btn {
+    background: linear-gradient(90deg, #ffcc00, #ff6600);
+    color: white;
+    border: none;
+    padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    transition: background 0.3s ease;
 }
 
-.login-box form button:hover {
-    background-color: #0056b3;
+.button-group .register-btn:hover {
+    background: linear-gradient(90deg, #ff9900, #ff3300);
 }
 
-/* Definindo o contêiner da imagem */
-.image-container {
-    position: center; /* Faz com que a imagem possa ser posicionada livremente */
-    left: 50px; /* Ajuste a posição horizontal conforme necessário */
-    top: 50px; /* Ajuste a posição vertical conforme necessário */
+.button-group .login-btn {
+    background-color: #004e9a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-/* Estilos para o contêiner de login */
-.login-container {
+.button-group .login-btn:hover {
+    background-color: #003580;
+}
+
+/* Link de esqueceu a senha */
+.login-box form .forgot-password {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
-    border-radius: 1px solid;
+    width: 100%;
+    font-size: 0.9em;
+    color: #004e9a;
+    margin-top: 10px;
 }
 
-.login-box {
-    background-color: #e0e0e0; /* ou qualquer cor de fundo que você preferir */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+.login-box form .forgot-password a {
+    color: #004e9a;
+    text-decoration: none;
 }
 
-.image-container img {
-    width: 500px; /* Ajuste para a largura desejada */
-    height: auto; /* Mantém a proporção da imagem */
-    justify-content: center;
-    align-items: center;
-    border-radius: 1px solid;
+.login-box form .forgot-password a:hover {
+    text-decoration: underline;
 }
