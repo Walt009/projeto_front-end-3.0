@@ -1,102 +1,102 @@
-/* Global Styles */
-* {
+/* Estilo geral */
+body {
+    background-color: #0044a8; /* Cor de fundo azul */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background-color: #004aad;
-    color: #fff;
+    height: 100vh;
 }
 
-/* Container and Layout */
+/* Contêiner principal centralizado */
 .container {
+    width: 80%;
+    max-width: 900px;
     display: flex;
-    width: 90%;
-    max-width: 1200px;
-    gap: 2rem; /* Use rem units for better responsiveness */
-}
-
-.left-side, .right-side {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-
-/* Left Side (Illustration) */
-.illustration {
-    text-align: center;
-}
-
-.illustration img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Right Side (Form) */
-.right-side {
-    background-color: #b3c7ff;
-    padding: 4rem;
-    border-radius: 1rem;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-.form-container {
-    width: 100%;
-    text-align: center;
-}
-
-h1 {
-    font-size: 2.4rem;
-    margin-bottom: 2rem;
-    color: #004aad;
-}
-
-.input-group {
+    justify-content: space-between;
+    background-color: #0044a8;
+    padding: 20px;
     position: relative;
-    margin-bottom: 1.5rem;
 }
 
-.icon {
-    position: absolute;
-    top: 50%;
-    left: 1rem;
-    transform: translateY(-50%);
-    color: #004aad;
-    font-size: 1.8rem;
+/* Logo no topo direito, fora da caixa de login */
+.logo {
+    position: fr;
+    top: 10px;
+    right: 20px;
+    width: 60px; /* Ajuste do tamanho conforme necessário */
 }
 
-input[type="email"] {
+/* Contêiner da ilustração */
+.illustration {
+    flex: 1;
+    text-align: center;
+    padding-right: 20px;
+}
+
+/* Dimensões da imagem da ilustração */
+.illustration img {
+    width: 90%; /* Maior largura para a imagem */
+    max-width: 350px; /* Tamanho máximo ajustado */
+}
+
+/* Linha de separação pontilhada */
+.divider {
+    width: 1px;
+    height: 300px;
+    border-left: 2px dashed #fff;
+    margin: 0 20px;
+}
+
+/* Contêiner do formulário */
+.form-container {
+    flex: 1;
+    background-color: #b3d1ff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Título do formulário */
+.form-container h2 {
+    color: #0044a8;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Campo de entrada de e-mail */
+.form-container input[type="email"] {
     width: 100%;
-    padding: 1rem 1rem 1rem 3rem;
+    padding: 12px;
+    border-radius: 20px;
     border: none;
-    border-radius: 0.5rem;
-    outline: none;
-    font-size: 1.6rem;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background-color: #0044a8;
+    color: #fff;
+    padding-left: 40px;
+    background-image: url('email-icon.png'); /* Adicione aqui o ícone de e-mail */
+    background-repeat: no-repeat;
+    background-position: 10px center;
 }
 
-/* Button (Add a button for submitting the form) */
-.submit-button {
-    background-color: #004aad;
+/* Estilo do botão enviar */
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    background-color: #0044a8;
     color: #fff;
-    padding: 1rem 2rem;
     border: none;
-    border-radius: 0.5rem;
+    font-size: 16px;
     cursor: pointer;
 }
 
-/* Responsiveness (Basic Media Query) */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-}    
+.form-container button:hover {
+    background-color: #003380;
+}
