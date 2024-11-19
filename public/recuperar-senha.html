@@ -5,24 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Senha</title>
     <link rel="stylesheet" href="css/recuperar-senha.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <a href="#" class="back-arrow">&#8592;</a>
-        <div class="left-side">
-            <div class="illustration">
-                <img src="fotos/Telas Finais.png" alt="Pessoa confusa com senha">
+        <div class="form-wrapper">
+            <div class="logo">
+                <img src="fotos/Telas Finais.png" alt="Logo">
             </div>
-        </div>
-        <div class="right-side">
-            <img src="fotos/Anotação 2024-10-29 131239.png" class="logo" alt="Logo Infinito">
-            <div class="form-container">
-                <h1>Recuperar senha</h1>
-                <div class="input-group">
-                    <span class="icon">&#9993;</span>
-                    <input type="email" placeholder="Email" required>
-                </div>
-            </div>
+            <h1>Recuperar Senha</h1>
+            <p>Digite seu e-mail abaixo para receber instruções de recuperação.</p>
+            <form>
+                <input type="email" placeholder="Digite seu e-mail" required>
+                <button type="submit">Enviar</button>
+            </form>
+            <a href="login.html" class="back-link">Voltar para o login</a>
         </div>
     </div>
 </body>

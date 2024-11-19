@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositório GitHub</title>
+    <link rel="stylesheet" href="css/github.css">
+</head>
+<body>
+    <div class="header">
+        <a href="C:\Users\Usuário\Music\trabalhos de apginas web\sobre\Sobre.html" class="home-button">Página Inicial</a>
+    </div>
+    <div class="container">
+        <a href="https://github.com/upe-poli-dctex-ferramentas/PoliAcessivelIA.git" target="_blank">
+            <img src="fotos/github.png" alt="GitHub" class="github-img">
+        </a>
+        <div class="description-box">
+            <p>
+                Este projeto de acessibilidade visa oferecer suporte personalizado a pessoas neurodivergentes por meio de um sistema de "tickets" e um assistente virtual. A pessoa pode abrir um ticket pelo aplicativo ou site, descrevendo o problema que enfrenta, como sobrecarga sensorial ou desorientação. Em resposta, um assistente virtual, especializado em acessibilidade neurodivergente, fornece orientações de maneira simples e empática, evitando termos técnicos. Ele adapta seu tom e ritmo ao nível de estresse do usuário e, se necessário, encaminha o ticket a um membro humano de suporte treinado, garantindo um atendimento acolhedor e inclusivo.
+            </p>
+        </div>
+    </div>
+
+    <!-- Ícone do chatbot -->
+    <div class="chat-icon" onclick="toggleChat()">
+        <img src="chat-icon.png" alt="Chat Icon">
+    </div>
+
+    <!-- Janela do chatbot -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            Chatbot
+            <button class="close-button" onclick="toggleChat()">X</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <!-- Respostas aparecerão aqui -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Digite sua mensagem...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            const chatWindow = document.getElementById('chatWindow');
+            chatWindow.style.display = chatWindow.style.display === 'none' || chatWindow.style.display === '' ? 'flex' : 'none';
+        }
+
+        async function sendMessage() {
+            const userInput = document.getElementById('userInput').value;
+            const chatBody = document.getElementById('chatBody');
+            if (userInput.trim()) {
+                chatBody.innerHTML += `<p><b>Você:</b> ${userInput}</p>`;
+                document.getElementById('userInput').value = '';
+
+                // Simulação de resposta da API (substitua pela integração real da API)
+                setTimeout(() => {
+                    chatBody.innerHTML += `<p><b>Bot:</b> Esta é uma resposta simulada. Substitua com a integração da API.</p>`;
+                }, 1000);
+            }
+        }
+    </script>
+</body>
+</html>

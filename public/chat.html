@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+    <!-- Ícone do chatbot -->
+    <div class="chat-icon" onclick="toggleChat()">
+        <img src="fotos/chat.jpg" alt="Chat Icon">
+    </div>
+
+    <!-- Janela do chatbot -->
+    <div class="chat-window" id="chatWindow">
+        <div class="chat-header">
+            Chatbot
+            <button class="close-button" onclick="toggleChat()">X</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <!-- Respostas aparecerão aqui -->
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="userInput" placeholder="Digite sua mensagem...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            const chatWindow = document.getElementById('chatWindow');
+            chatWindow.style.display = chatWindow.style.display === 'none' || chatWindow.style.display === '' ? 'flex' : 'none';
+        }
+
+        async function sendMessage() {
+            const userInput = document.getElementById('userInput').value;
+            const chatBody = document.getElementById('chatBody');
+            if (userInput.trim()) {
+                chatBody.innerHTML += `<p><b>Você:</b> ${userInput}</p>`;
+                document.getElementById('userInput').value = '';
+
+                // Enviar mensagem para a API
+                try {
+                    const response = await fetch('URL_DA_API', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer SUA_CHAVE_API'
+                        },
+                        body: JSON.stringify({ message: userInput })
+                    });
+
+                    const data = await response.json();
+                    chatBody.innerHTML += `<p><b>Bot:</b> ${data.reply}</p>`;
+                } catch (error) {
+                    chatBody.innerHTML += `<p><b>Bot:</b> Ocorreu um erro.</p>`;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
